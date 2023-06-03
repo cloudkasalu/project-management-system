@@ -1,0 +1,367 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+:root {
+  --primary-color: #141466;
+  --secondary-color: #2929cc;
+  --accent-color: #6677cc;
+  --background-color: #dadae6;
+  --text-color:#ffffff;
+}
+
+/* Common styles for both pages */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+button{
+  width: 100%;
+}
+
+aside {
+  width: 200px;
+  height: 100vh;
+  background-color: var(--primary-color);
+  color: var(--background-color);
+  position: fixed;
+}
+
+nav {
+  margin-top: 20px;
+}
+
+
+nav a {
+  color: var(--background-color);
+  text-decoration: none;
+  display: block;
+  padding: 10px;
+}
+
+nav a.active {
+  background-color: var(--secondary-color);
+  border-radius: 5px;
+}
+
+main {
+  margin-left: 200px;
+  padding: 20px;
+}
+
+h1 {
+  margin-top: 0;
+}
+
+#project-list {
+  list-style: none;
+  padding: 0;
+}
+
+.project-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: var(--background-color);
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.project-details {
+  flex: 1;
+}
+
+.project-name {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.project-progress {
+  background-color: #eaeaea;
+  height: 10px;
+  border-radius: 5px;
+}
+
+.progress {
+  background-color: var(--secondary-color);
+  height: 100%;
+  border-radius: 5px;
+}
+
+.project-due-date {
+  font-size: 14px;
+  color: #888888;
+}
+
+#add-project-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: var(--secondary-color);
+  color: var(--background-color);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#add-project-btn:hover {
+  background-color: #6677ee;
+}
+
+/* Specific styles for add-project.html */
+#project-form {
+  width: 400px;
+  padding: 20px;
+  background-color: var(--background-color);
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+textarea,
+input[type="date"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button[type="submit"],
+button[type="button"] {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: var(--secondary-color);
+  color: var(--background-color);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button[type="submit"] {
+  margin-right: 10px;
+}
+
+button[type="submit"]:hover,
+button[type="button"]:hover {
+  background-color: #6677ee;
+}
+
+
+/* Common styles for all pages */
+/* ... */
+
+/* Specific styles for project-details.html */
+.view-project-header {
+  background-color: var(--secondary-color);
+  padding: 20px;
+  color: var(--background-color);
+}
+
+.project-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.project-details {
+  max-width: 70%;
+}
+
+.progress-bar {
+  width: 100%;
+  background-color: #eaeaea;
+  height: 10px;
+  border-radius: 5px;
+  margin-top: 10px;
+  overflow: hidden;
+}
+
+.progress {
+  background-color: var(--secondary-color);
+  height: 100%;
+  border-radius: 5px;
+}
+
+
+
+/* main {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+} */
+
+.section{
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.section>:nth-child(1){
+  width: 30%;
+}
+.section>:nth-child(2){
+  width: 65%;
+}
+
+
+    /* Project header */
+    .project-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+
+    .project-title {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .project-dates {
+      font-size: 14px;
+      color: #888888;
+    }
+
+    .progress-bar {
+      width: 100%;
+      background-color: #eaeaea;
+      height: 10px;
+      border-radius: 5px;
+      margin-top: 10px;
+      overflow: hidden;
+    }
+
+    .progress {
+      background-color: var(--secondary-color);
+      height: 100%;
+      border-radius: 5px;
+    }
+
+    /* Milestones section */
+    .milestones-section {
+      margin-bottom: 20px;
+    }
+
+    .milestones-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+
+    .milestones-title {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .add-milestone-btn {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: var(--secondary-color);
+      color: var(--background-color);
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .add-milestone-btn:hover {
+      background-color: #6677ee;
+    }
+
+    .milestone-card {
+      display: flex;
+      align-items: center;
+      padding: 10px;
+      background-color: var(--background-color);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      border-radius: 5px;
+      margin-bottom: 10px;
+      cursor: pointer;
+    }
+
+    .milestone-name {
+      font-weight: bold;
+      margin-right: 10px;
+    }
+
+    /* Tasks section */
+
+    .tasks-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+
+    .tasks-title {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .add-task-btn {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: var(--secondary-color);
+      color: var(--background-color);
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .add-task-btn:hover {
+      background-color: #6677ee;
+    }
+
+    .task-card {
+      display: flex;
+      align-items: center;
+      padding: 10px;
+      background-color: var(--background-color);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+
+    .task-name {
+      margin-right: 10px;
+    }
+
+
+    .add-btn {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: var(--secondary-color);
+      color: var(--background-color);
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .add-btn:hover {
+      background-color: #6677ee;
+    }
