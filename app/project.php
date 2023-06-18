@@ -63,7 +63,9 @@ try {
         foreach ($result as $row) {
 
             $tasks[] = array(
+                'project_id' => $row['project_id'], 
                 'milestone_id' => $row['milestone_id'], 
+                'task_id' => $row['task_id'], 
                 'task_name' => $row['task_name'], 
             );
         }

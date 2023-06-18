@@ -11,7 +11,7 @@
   <aside>
     <nav>
       <ul>
-        <li><a href="home.php" class="active"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="index.php" class="active"><i class="fas fa-home"></i> Home</a></li>
         <li><a href="tasks.php"><i class="fas fa-tasks"></i> Tasks</a></li>
         <li><a href="team.php"><i class="fas fa-users"></i> Team</a></li>
       </ul>

@@ -39,8 +39,13 @@
           <?php foreach($tasks as $task ): ?>
          
             <li class="task-card">
-              <div class="task-name"><?= $task['task_name']?></div>
-             <a href="completetask.php?task_id=<?=$task['task_id']?>">Complete</a>
+         
+              <form action="completetask.php" method="post" class="task-name">
+                  <input type="checkbox" name="checkbox" onChange="this.form.submit()" class="complete-task">
+                  <input type="hidden" value="<?=$task['task_id']?>" name="task_id">
+                  <p ><?= $task['task_name']?></p>
+              </form>
+
             </li>
             
           <?php endforeach;?>

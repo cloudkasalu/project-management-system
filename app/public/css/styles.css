@@ -365,3 +365,12 @@ button[type="button"]:hover {
     .add-btn:hover {
       background-color: #6677ee;
     }
+
+
+    .complete-task{
+      border: 1px solid;
+      width: 45px;
+      height:45px;
+      border-radius: 30px;
+      
+    }
