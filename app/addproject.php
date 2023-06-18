@@ -1,10 +1,13 @@
 <?php
+
 use Classes\DatabaseTable;
+require __DIR__ . '/vendor/autoload.php';
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv->load();
 
 try {
 
     include __DIR__ . '/includes/DatabaseConnection.php';
-    include __DIR__ . '/classes/DatabaseTable.php';
     require __DIR__ . '/includes/global.php';
 
 
@@ -14,8 +17,7 @@ try {
 
         $project_name = $_POST['project-name'];
         $project_description = $_POST['project-description'];
-        $project_end_date = $_POST['project_end_date'];
-
+        $project_end_date = $_POST['project-end-date'];
 
         $date = new \DateTime();
         $values= [
@@ -30,7 +32,7 @@ try {
 
         $id = $projectsTable->find('project_name',$project_name)['project_id'];
 
-        header('Location: addmilestone.php?id='. $id .'');
+        header('Location: /addmilestone.php?id='. $id .'');
 
 
     }else{

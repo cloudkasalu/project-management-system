@@ -1,10 +1,13 @@
 <?php
+
 use Classes\DatabaseTable;
+require __DIR__ . '/vendor/autoload.php';
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv->load();
 
 try {
 
     include __DIR__ . '/includes/DatabaseConnection.php';
-    include __DIR__ . '/classes/DatabaseTable.php';
     require __DIR__ . '/includes/global.php';
 
 
@@ -18,7 +21,7 @@ try {
 
         
     }else{
-        header('Location: index.php');
+        header('Location: /');
     }
 
 

@@ -1,10 +1,13 @@
 <?php
+
 use Classes\DatabaseTable;
+require __DIR__ . '/vendor/autoload.php';
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv->load();
 
 try {
 
     include __DIR__ . '/includes/DatabaseConnection.php';
-    include __DIR__ . '/classes/DatabaseTable.php';
     require __DIR__ . '/includes/global.php';
 
 
@@ -43,7 +46,7 @@ try {
                 );
             }
         }else{
-            header('Location: addmilestone.php?id= ' .$project_id. '');
+            header('Location: /addmilestone.php?id= ' .$project_id. '');
         }
 
         if(isset($_GET['milestone_id'])){
@@ -78,7 +81,7 @@ try {
         $output = ob_get_clean();
 
     }else{
-        header('Location: home.php');
+        header('Location: /');
 
     }
 

@@ -1,6 +1,7 @@
 
     <h1>Projects</h1>
     <ul id="project-list">
+    <?php if(isset($projects)){ ?>
     <?php foreach($projects as $project ): ?>
       <li>
       <a  href="project.php?project_id=<?=$project['project_id']?>">
@@ -16,6 +17,7 @@
         </a>
       </li>
       <?php endforeach;?>
+      <?php } ?>
 
     <a  href="addproject.php" >
     <button id="add-project-btn">Add Project</button>
